@@ -8,7 +8,7 @@ use nu_protocol::{
 use super::eager::ToDataFrame;
 use super::expressions::ExprCol;
 use super::lazy::{LazyCollect, ToLazyFrame};
-use crate::Let;
+//use crate::Let;
 
 pub fn test_dataframe(cmds: Vec<Box<dyn Command + 'static>>) {
     if cmds.is_empty() {
@@ -23,7 +23,7 @@ pub fn test_dataframe(cmds: Vec<Box<dyn Command + 'static>>) {
         // Base functions that are needed for testing
         // Try to keep this working set small to keep tests running as fast as possible
         let mut working_set = StateWorkingSet::new(&*engine_state);
-        working_set.add_decl(Box::new(Let));
+        //working_set.add_decl(Box::new(Let));
         working_set.add_decl(Box::new(ToDataFrame));
         working_set.add_decl(Box::new(ToLazyFrame));
         working_set.add_decl(Box::new(LazyCollect));
