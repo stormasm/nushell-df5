@@ -118,3 +118,6 @@ features = [
 	"strings",
 	"to_dummies",
 ]
+
+[dev-dependencies]
+nu-test-support = { path = "../nu-test-support", version = "0.71.1"  }
